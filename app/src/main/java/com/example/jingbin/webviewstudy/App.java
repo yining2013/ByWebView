@@ -43,7 +43,9 @@ public class App extends Application {
             public void onViewInitFinished(boolean arg0) {
                 //x5內核初始化完成的回调，为true表示x5内核加载成功，否则表示x5内核加载失败，会自动切换到系统内核。
                 if (!arg0) {
-                    Log.e("ByWebView", "x5内核加载失败，自动切换到系统内核");
+                    Log.e("jerry", "x5内核加载失败，自动切换到系统内核");
+                    Log.e("jerry", "安装本地内核");
+					QbSdk.installLocalTbsCore(getApplicationContext(),45912,"/mnt/sdcard/tbs.apk");
                 }
             }
 
